@@ -1,8 +1,8 @@
 import { Meta, Story } from '@storybook/react';
-import Logo, { LogoVariant } from '../components/elements/Logo';
+import Logo, { LogoSize } from '../components/elements/Logo';
 
 interface Args {
-  variant: LogoVariant;
+  size: LogoSize;
 }
 
 export default {
@@ -10,19 +10,19 @@ export default {
   component: Logo,
 } as Meta;
 
-const Template: Story<Args> = (args: Args) => <Logo variant={args.variant} />;
+const Template: Story<Args> = (args: Args) => <Logo {...args} />;
 
 export const Small = Template.bind({});
 Small.args = {
-  variant: 'small',
+  size: 'small',
 };
 
 export const Medium = Template.bind({});
 Medium.args = {
-  variant: 'medium',
+  size: 'medium',
 };
 
 export const Large = Template.bind({});
 Large.args = {
-  variant: 'large',
+  size: 'large',
 };

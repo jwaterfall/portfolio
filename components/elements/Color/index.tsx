@@ -5,11 +5,11 @@ import { Primary, Secondary } from './styles';
 export type ColorVariant = 'primary' | 'secondary';
 
 export interface ColorProps {
-  variant?: ColorVariant;
+  color?: ColorVariant;
 }
 
-const Color: FC<ColorProps> = ({ variant = 'primary', ...props }) => {
-  switch (variant) {
+const Color: FC<ColorProps> = ({ color = 'primary', ...props }) => {
+  switch (color) {
     case 'primary':
       return <Primary {...props} />;
     case 'secondary':

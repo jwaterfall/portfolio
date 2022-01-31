@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import Button from '../../elements/Button';
 import Logo from '../../elements/Logo';
 import NavLink from '../../elements/NavLink';
 
@@ -6,7 +7,7 @@ import { Container, Nav, NavItem } from './styles';
 
 const Header: FC = () => (
   <Container>
-    <Logo variant="small" />
+    <Logo size="small" />
     <Nav>
       <NavLink href="/#about">
         <NavItem>about</NavItem>
@@ -23,6 +24,7 @@ const Header: FC = () => (
       <NavLink href="/blog">
         <NavItem>blog</NavItem>
       </NavLink>
+      <Button size="sm">Resume</Button>
     </Nav>
   </Container>
 );

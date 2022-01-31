@@ -2,22 +2,21 @@ import { ButtonHTMLAttributes, FC } from 'react';
 
 import { PrimaryButton, SecondaryButton } from './styles';
 
-export type ButtonVariant = 'primary' | 'secondary';
+export type ButtonColor = 'primary' | 'secondary';
 export type ButtonSize = 'sm' | 'md';
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: ButtonVariant;
+  color?: ButtonColor;
   size?: ButtonSize;
-  fullWidth?: boolean;
-  m?: string;
+  isFullWidth?: boolean;
 }
 
 const Button: FC<ButtonProps> = ({
-  variant = 'primary',
+  color = 'primary',
   size = 'md',
   ...props
 }) => {
-  switch (variant) {
+  switch (color) {
     case 'primary':
       return <PrimaryButton size={size} {...props} />;
     case 'secondary':

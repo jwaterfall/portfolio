@@ -21,10 +21,10 @@ declare module 'styled-components' {
     fontSizeXl: string;
     fontSizeXxl: string;
     fontSizeXxxl: string;
-    weightThin: string;
-    weightRegular: string;
-    weightBold: string;
-    weightExtraBold: string;
+    fontWeightThin: string;
+    fontWeightRegular: string;
+    fontWeightBold: string;
+    fontWeightExtraBold: string;
     transition: string;
   }
 }

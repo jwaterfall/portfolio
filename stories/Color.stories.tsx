@@ -3,7 +3,7 @@ import Color, { ColorVariant } from '../components/elements/Color';
 import Typography from '../components/elements/Typography';
 
 interface Args {
-  variant: ColorVariant;
+  color: ColorVariant;
   text: string;
 }
 
@@ -12,20 +12,20 @@ export default {
   component: Color,
 } as Meta;
 
-const Template: Story<Args> = (args: Args) => (
+const Template: Story<Args> = ({ text, ...args }: Args) => (
   <Typography variant="h1">
-    <Color variant={args.variant}>{args.text}</Color>
+    <Color {...args}>{text}</Color>
   </Typography>
 );
 
 export const Primary = Template.bind({});
 Primary.args = {
-  variant: 'primary',
+  color: 'primary',
   text: 'Primary',
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
-  variant: 'secondary',
+  color: 'secondary',
   text: 'Secondary',
 };

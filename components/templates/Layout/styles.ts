@@ -15,4 +15,13 @@ export const Content = styled.main`
   width: 100%;
   max-width: 100rem;
   min-height: 100vh;
+  @media (max-width: 1080px) {
+    padding: 0px 100px;
+  }
+  @media (max-width: 768px) {
+    padding: 0px 50px;
+  }
+  @media (max-width: 480px) {
+    padding: 0px 25px;
+  }
 `;

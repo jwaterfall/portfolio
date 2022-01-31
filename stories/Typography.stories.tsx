@@ -13,8 +13,8 @@ export default {
   component: Typography,
 } as Meta;
 
-const Template: Story<Args> = (args: Args) => (
-  <Typography variant={args.variant}>{args.text}</Typography>
+const Template: Story<Args> = ({ text, ...args }: Args) => (
+  <Typography {...args}>{text}</Typography>
 );
 
 export const H1 = Template.bind({});

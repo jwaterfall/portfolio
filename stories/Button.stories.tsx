@@ -1,10 +1,11 @@
 import { Meta, Story } from '@storybook/react';
-import Button, { ButtonVariant } from '../components/elements/Button';
+import Button, { ButtonColor, ButtonSize } from '../components/elements/Button';
 
 interface Args {
-  variant: ButtonVariant;
+  color: ButtonColor;
+  size: ButtonSize;
   text: string;
-  fullWidth: boolean;
+  isFullWidth: boolean;
 }
 
 export default {
@@ -13,28 +14,26 @@ export default {
 } as Meta;
 
 const Template: Story<Args> = (args: Args) => (
-  <Button variant={args.variant} fullWidth={args.fullWidth}>
-    {args.text}
-  </Button>
+  <Button {...args}>{args.text}</Button>
 );
 
 export const Primary = Template.bind({});
 Primary.args = {
-  variant: 'primary',
+  color: 'primary',
   text: 'Click me!',
-  fullWidth: false,
+  isFullWidth: false,
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
-  variant: 'secondary',
+  color: 'secondary',
   text: 'Click me!',
-  fullWidth: false,
+  isFullWidth: false,
 };
 
-export const Fullwidth = Template.bind({});
-Fullwidth.args = {
-  variant: 'primary',
+export const isFullWidth = Template.bind({});
+isFullWidth.args = {
+  color: 'primary',
   text: 'Full width!',
-  fullWidth: true,
+  isFullWidth: true,
 };

@@ -11,6 +11,9 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
   gap: 1.5rem;
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const SocialLink = styled.a`

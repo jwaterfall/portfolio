@@ -8,9 +8,3 @@ export const Container = styled.section`
   min-height: 100vh;
   padding: 0;
 `;
-
-export const ButtonContainer = styled.div`
-  margin-top: 3rem;
-  display: flex;
-  gap: 2rem;
-`;

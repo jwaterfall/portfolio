@@ -4,10 +4,9 @@ import { ButtonSize } from './';
 
 export const PrimaryButton = styled.button<{
   size: ButtonSize;
-  fullWidth?: boolean;
-  m?: string;
+  isFullWidth?: boolean;
 }>`
-  margin: ${(props) => props.m ?? 0};
+  margin: 0;
   color: ${(props) => props.theme.primary};
   background: none;
   border: 1px solid ${(props) => props.theme.primary};
@@ -19,11 +18,11 @@ export const PrimaryButton = styled.button<{
     props.size === 'sm' &&
     `padding: 0.75rem 1rem; font-size: ${props.theme.fontSizeXs};`}
   font-family: ${(props) => props.theme.fontFamilySecondary};
-  font-weight: ${(props) => props.theme.weightBold};
+  font-weight: ${(props) => props.theme.fontWeightBold};
   text-decoration: none;
   cursor: pointer;
   transition: ${(props) => props.theme.transition};
-  ${(props) => props.fullWidth && 'width: 100%;'};
+  ${(props) => props.isFullWidth && 'width: 100%;'};
   &:hover {
     background: ${(props) => props.theme.buttonPrimaryHover};
   }

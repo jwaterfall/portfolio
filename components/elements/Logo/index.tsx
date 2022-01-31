@@ -3,15 +3,15 @@ import { FC } from 'react';
 import Color from '../Color';
 import Typography from '../Typography';
 
-export type LogoVariant = 'small' | 'medium' | 'large';
+export type LogoSize = 'small' | 'medium' | 'large';
 
 export interface LogoProps {
-  variant?: LogoVariant;
+  size?: LogoSize;
 }
 
-const Logo: FC<LogoProps> = ({ variant = 'medium' }) => {
+const Logo: FC<LogoProps> = ({ size = 'medium' }) => {
   const getTypographyVariant = () => {
-    switch (variant) {
+    switch (size) {
       case 'small':
         return 'h4';
       case 'medium':
@@ -27,9 +27,9 @@ const Logo: FC<LogoProps> = ({ variant = 'medium' }) => {
       align="center"
       font="secondary"
     >
-      <Color variant="secondary">&#60;</Color>
+      <Color color="secondary">&#60;</Color>
       Jack-Waterfall
-      <Color variant="secondary">/&#62;</Color>
+      <Color color="secondary">/&#62;</Color>
     </Typography>
   );
 };

@@ -24,7 +24,7 @@ export const Nav = styled.nav`
 
 export const NavItem = styled.div`
   font-family: ${(props) => props.theme.fontFamilySecondary};
-  font-size: ${(props) => props.theme.fontSizeXs};
+  font-size: ${(props) => props.theme.fontSizeSm};
   transition: ${(props) => props.theme.transition};
   color: ${(props) => props.theme.textSecondary};
   cursor: pointer;
