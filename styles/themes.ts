@@ -1,0 +1,28 @@
+import { DefaultTheme } from 'styled-components';
+
+export const darkTheme: DefaultTheme = {
+  background: '#151513',
+  foreground: '#0c0c13',
+  scrollbarThumb: '#ffffff10',
+  text: '#FFFFFF',
+  textSecondary: '#ffffff90',
+  primary: '#00BD9D',
+  secondary: '#df205b',
+  buttonPrimaryHover: '#00BD9D25',
+  buttonSecondaryHover: '#CC336325',
+  fontFamily: `'Roboto', sans-serif;`,
+  fontFamilySecondary: `'Fira Code', monospace`,
+  fontSizeXxs: '0.75rem',
+  fontSizeXs: '0.8125rem',
+  fontSizeSm: '0.875rem',
+  fontSizeMd: '1rem',
+  fontSizeLg: '1.125rem',
+  fontSizeXl: '1.25rem',
+  fontSizeXxl: '1.5rem',
+  fontSizeXxxl: '4rem',
+  weightThin: '300',
+  weightRegular: '400',
+  weightBold: '500',
+  weightExtraBold: '600',
+  transition: 'all 0.25s cubic-bezier(0.645,0.045,0.355,1);',
+};
