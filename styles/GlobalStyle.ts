@@ -3,6 +3,7 @@ import { createGlobalStyle } from 'styled-components';
 const GlobalStyle = createGlobalStyle`
     html {
         box-sizing: border-box;
+        scroll-behavior: smooth;
     }
 
     *,
@@ -17,7 +18,7 @@ const GlobalStyle = createGlobalStyle`
         font-size: 16px;
         font-family: ${(props) => props.theme.fontFamily};
         color: ${(props) => props.theme.text};
-  line-height: 1.3;
+        line-height: 1.3;
         
         @media (max-width: 768px) {
             font-size: 17px;

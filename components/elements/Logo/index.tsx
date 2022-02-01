@@ -13,11 +13,11 @@ const Logo: FC<LogoProps> = ({ size = 'medium' }) => {
   const getTypographyVariant = () => {
     switch (size) {
       case 'small':
-        return 'h4';
+        return 'h5';
       case 'medium':
-        return 'h3';
+        return 'h4';
       case 'large':
-        return 'h2';
+        return 'h3';
     }
   };
 

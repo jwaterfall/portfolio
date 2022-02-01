@@ -15,19 +15,15 @@ const BaseTypography = styled.div<Props>`
   ${(props) =>
     props.font === 'secondary' &&
     `font-family: ${props.theme.fontFamilySecondary};`};
-  ${(props) =>
-    props.font === 'secondary' &&
-    `font-family: ${props.theme.fontFamilySecondary};`};
   text-align: ${(props) => props.align};
 `;
 
 export const P = styled(BaseTypography).attrs({
   as: 'p',
 })<Props>`
-  font-size: ${(props) => props.theme.fontSizeSm};
-  font-weight: ${(props) => props.theme.fontWeightThin};
-  letter-spacing: 0.05rem;
-  max-width: 35rem;
+  font-size: ${(props) => props.theme.fontSizeMd};
+  font-weight: ${(props) => props.theme.fontWeightMedium};
+  line-height: 1.75rem;
   color: ${(props) => props.theme.textSecondary};
 `;
 
@@ -56,12 +52,12 @@ export const H4 = styled(BaseTypography).attrs({
   as: 'h4',
 })<Props>`
   font-size: ${(props) => props.theme.fontSizeLg};
-  font-weight: ${(props) => props.theme.fontWeightBold};
+  font-weight: ${(props) => props.theme.fontWeightSemiBold};
 `;
 
 export const H5 = styled(BaseTypography).attrs({
   as: 'h5',
 })<Props>`
   font-size: ${(props) => props.theme.fontSizeMd};
-  font-weight: ${(props) => props.theme.fontWeightBold};
+  font-weight: ${(props) => props.theme.fontWeightSemiBold};
 `;

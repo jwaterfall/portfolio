@@ -25,6 +25,7 @@ export const Nav = styled.nav`
 export const NavItem = styled.div`
   font-family: ${(props) => props.theme.fontFamilySecondary};
   font-size: ${(props) => props.theme.fontSizeSm};
+  font-weight: ${(props) => props.theme.fontWeightMedium};
   transition: ${(props) => props.theme.transition};
   color: ${(props) => props.theme.textSecondary};
   cursor: pointer;
@@ -34,13 +35,11 @@ export const NavItem = styled.div`
     transform: translateY(-0.1rem);
   }
   &::before {
-    content: '<';
-    margin-right: 0.2rem;
+    content: '//';
+    margin-right: 0.25rem;
     color: ${(props) => props.theme.primary};
   }
-  &::after {
-    content: '/>';
-    margin-left: 0.2rem;
-    color: ${(props) => props.theme.primary};
+  &.active {
+    color: ${(props) => props.theme.text};
   }
 `;
