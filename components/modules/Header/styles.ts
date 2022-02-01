@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+export const Container = styled.div<{ isScrolledToTop: boolean }>`
   width: 100%;
-  height: 6.25rem;
+  height: ${(props) => (props.isScrolledToTop ? '6.25rem' : '5rem')};
   padding: 0 3.25rem;
   display: flex;
   align-items: center;
@@ -11,6 +11,10 @@ export const Container = styled.div`
   top: 0;
   z-index: 11;
   background: ${(props) => props.theme.background};
+  transition: ${(props) => props.theme.transition};
+  ${(props) =>
+    !props.isScrolledToTop &&
+    'box-shadow: 0 0.5rem 1.75rem -0.75rem #00000080;'}
 `;
 
 export const Nav = styled.nav`
