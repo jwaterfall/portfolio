@@ -7,7 +7,9 @@ import { Container, Nav, NavItem } from './styles';
 
 const Header: FC = () => (
   <Container>
-    <Logo size="small" />
+    <NavLink href="/#home">
+      <Logo size="medium" />
+    </NavLink>
     <Nav>
       <NavLink href="/#about">
         <NavItem>about</NavItem>
