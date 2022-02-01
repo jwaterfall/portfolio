@@ -67,6 +67,10 @@ const Experience: FC = () => (
               use of scrums, sprints and retrospectives.
             </ListItem>
             <ListItem>
+              I learnt how to effectively use Git and Github using features such
+              as branching, pull requests, code reviews and pipelines.
+            </ListItem>
+            <ListItem>
               I learnt PostgreSQL as an alternative database technology.
             </ListItem>
           </List>
