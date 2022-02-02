@@ -29,7 +29,7 @@
 
 ## Building for production
 
-1. Install the required dependencies
+1. Generate a production build
 
    ```sh
    npm run build
