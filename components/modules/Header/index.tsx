@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import useIsScrolledToTop from '../../../hooks/useIsScrolledToTop';
+import Animation from '../../elements/Animation';
 import Button from '../../elements/Button';
 import Logo from '../../elements/Logo';
 import NavLink from '../../elements/NavLink';
@@ -15,22 +16,34 @@ const Header: FC = () => {
         <Logo size="medium" />
       </NavLink>
       <Nav>
-        <NavLink href="/#about">
-          <NavItem>about</NavItem>
-        </NavLink>
-        <NavLink href="/#experience">
-          <NavItem>experience</NavItem>
-        </NavLink>
-        <NavLink href="/#projects">
-          <NavItem>projects</NavItem>
-        </NavLink>
-        <NavLink href="/#contact">
-          <NavItem>contact</NavItem>
-        </NavLink>
-        <NavLink href="/blog">
-          <NavItem>blog</NavItem>
-        </NavLink>
-        <Button size="sm">Resume</Button>
+        <Animation>
+          <NavLink href="/#about">
+            <NavItem>about</NavItem>
+          </NavLink>
+        </Animation>
+        <Animation delay={100}>
+          <NavLink href="/#experience">
+            <NavItem>experience</NavItem>
+          </NavLink>
+        </Animation>
+        <Animation delay={200}>
+          <NavLink href="/#projects">
+            <NavItem>projects</NavItem>
+          </NavLink>
+        </Animation>
+        <Animation delay={300}>
+          <NavLink href="/#contact">
+            <NavItem>contact</NavItem>
+          </NavLink>
+        </Animation>
+        <Animation delay={400}>
+          <NavLink href="/blog">
+            <NavItem>blog</NavItem>
+          </NavLink>
+        </Animation>
+        <Animation delay={500}>
+          <Button size="sm">Resume</Button>
+        </Animation>
       </Nav>
     </Container>
   );
