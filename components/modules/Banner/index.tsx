@@ -10,7 +10,7 @@ import Typography from '../../elements/Typography';
 import { ParagraphContainer } from './styles';
 
 const Banner: FC = () => (
-  <Section id="home">
+  <Section hash="home">
     <Animation delay={600} variant="bottom">
       <Typography variant="h5" font="secondary" m="0 0 1rem ">
         <Color>Hey, my name is</Color>

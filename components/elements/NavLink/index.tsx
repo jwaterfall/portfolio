@@ -11,6 +11,7 @@ const NavLink: FC<INavLinkProps> = ({ children, href, ...props }) => {
   const { asPath: currentPath } = useRouter();
 
   if (currentPath === href) {
+    console.log(href);
     return (
       <Link href={href} {...props} passHref>
         <Wrapper>
