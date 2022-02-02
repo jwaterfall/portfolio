@@ -1,14 +1,26 @@
-import Link from 'next/link';
 import { FC } from 'react';
-
-import withLayout from '../components/HOC/withLayout';
+import Button from '../components/elements/Button';
+import ButtonContainer from '../components/elements/ButtonContainer';
+import Flexbox from '../components/elements/Flexbox';
+import NavLink from '../components/elements/NavLink';
+import Section from '../components/elements/Section';
+import Typography from '../components/elements/Typography';
+import Layout from '../components/Layout';
 
 const NotFoundPage: FC = () => (
-  <div>
-    <h2>404</h2>
-    <h4>Page not found...</h4>
-    <Link href="/">Homepage</Link>
-  </div>
+  <Layout>
+    <Section hash="404">
+      <Flexbox direction="column" alignItems="center" isFullWidth>
+        <Typography variant="h1">404</Typography>
+        <Typography>Page not found...</Typography>
+        <ButtonContainer>
+          <NavLink href="/">
+            <Button isFullWidth>Return to homepage</Button>
+          </NavLink>
+        </ButtonContainer>
+      </Flexbox>
+    </Section>
+  </Layout>
 );
 
-export default withLayout(NotFoundPage);
+export default NotFoundPage;

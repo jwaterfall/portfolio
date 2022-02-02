@@ -1,7 +1,7 @@
 import { FC } from 'react';
 
-import Header from '../../modules/Header';
-import SocialLinks from '../../modules/SocialLinks';
+import Header from '../Header';
+import SocialLinks from '../SocialLinks';
 import { Container, Content, Page } from './styles';
 
 const Layout: FC = ({ children }) => (

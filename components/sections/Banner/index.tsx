@@ -39,9 +39,9 @@ const Banner: FC = () => (
         <NavLink href="/#projects">
           <Button isFullWidth>Check out my work!</Button>
         </NavLink>
-        <NavLink href="/blog">
+        <NavLink href="#contact">
           <Button isFullWidth color="secondary">
-            View my blog
+            Contact me
           </Button>
         </NavLink>
       </ButtonContainer>

@@ -1,9 +1,9 @@
 import { FC } from 'react';
-import useIsScrolledToTop from '../../../hooks/useIsScrolledToTop';
-import Animation from '../../elements/Animation';
-import Button from '../../elements/Button';
-import Logo from '../../elements/Logo';
-import NavLink from '../../elements/NavLink';
+import useIsScrolledToTop from '../../hooks/useIsScrolledToTop';
+import Animation from '../elements/Animation';
+import Button from '../elements/Button';
+import Logo from '../elements/Logo';
+import NavLink from '../elements/NavLink';
 
 import { Container, Nav, NavItem } from './styles';
 
@@ -37,11 +37,6 @@ const Header: FC = () => {
           </NavLink>
         </Animation>
         <Animation delay={400}>
-          <NavLink href="/blog">
-            <NavItem>blog</NavItem>
-          </NavLink>
-        </Animation>
-        <Animation delay={500}>
           <Button size="sm">Resume</Button>
         </Animation>
       </Nav>

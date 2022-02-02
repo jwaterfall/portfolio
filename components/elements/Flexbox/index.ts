@@ -24,6 +24,7 @@ export interface FlexboxProps {
   alignItems?: FlexboxAlignItems;
   justifyContent?: FlexboxJustifyContent;
   gap?: string;
+  isFullWidth?: boolean;
 }
 
 const Flexbox = styled.div<FlexboxProps>`
@@ -33,11 +34,13 @@ const Flexbox = styled.div<FlexboxProps>`
     alignItems = 'stretch',
     justifyContent = '	flex-start',
     gap = '0',
+    isFullWidth = false,
   }) => `
       flex-direction: ${direction};
       align-items: ${alignItems};
       justify-content: ${justifyContent};
       gap: ${gap};
+      ${isFullWidth && 'width: 100%;'};
     `}
 `;
 
