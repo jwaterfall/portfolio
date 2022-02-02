@@ -9,7 +9,7 @@ import Typography from '../../elements/Typography';
 import { Container, Image } from './styles';
 
 const About: FC = () => (
-  <Section id="about">
+  <Section hash="about">
     <Animation delay={250} duration={500} variant="bottom">
       <SectionHeading>About Me</SectionHeading>
       <Container>

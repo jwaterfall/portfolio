@@ -8,7 +8,7 @@ import SectionHeading from '../../elements/SectionHeading';
 import Typography from '../../elements/Typography';
 
 const Experience: FC = () => (
-  <Section id="experience" variant="secondary">
+  <Section hash="experience" variant="secondary">
     <Animation delay={250} duration={500} variant="bottom">
       <SectionHeading>Experience</SectionHeading>
       <Flexbox direction="column" gap="1rem">
