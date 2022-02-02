@@ -22,14 +22,15 @@ const About: FC = () => (
           </Typography>
           <Typography>
             I studied computer science at college where I spent 2 years learning
-            Python and the theory behind programming. After finishing college I
+            Python and the theory behind computers. After finishing college I
             decided that I didn&#39;t want to go to university, instead I spent
-            3 years teaching myself full stack JavaScript development.
+            3 years running a small business during which I taught myself full
+            stack JavaScript development.
           </Typography>
           <Typography>
             Now I want to put my skills to good use to create scalable, reliable
-            and accessible software. I joined the School Of Code so that I could
-            get the experience of working as part of a team in an agile way.
+            and accessible software. I joined the School Of Code to kickstart my
+            career in the software development industry.
           </Typography>
           <Typography>
             Here are some of the most recent technologies that I have used:
