@@ -25,14 +25,11 @@ const Animation: FC<AnimationProps> = ({
   }, [inView, delay]);
 
   return (
-    <StyledAnimation
-      ref={ref}
-      variant={variant}
-      show={show}
-      duration={duration}
-    >
-      {children}
-    </StyledAnimation>
+    <div ref={ref}>
+      <StyledAnimation variant={variant} show={show} duration={duration}>
+        {children}
+      </StyledAnimation>
+    </div>
   );
 };
 
