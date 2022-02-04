@@ -17,3 +17,16 @@ export const Image = styled.img`
 export const RightSection = styled.div`
   padding: 2rem;
 `;
+
+export const Link = styled.a`
+  & > svg {
+    width: 1.25rem;
+    height: 1.25rem;
+    color: ${(props) => props.theme.textSecondary};
+    transition: ${(props) => props.theme.transition};
+    cursor: pointer;
+    &:hover {
+      color: ${(props) => props.theme.primary};
+    }
+  }
+`;

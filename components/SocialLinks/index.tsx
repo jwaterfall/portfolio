@@ -12,12 +12,14 @@ const SocialLinks: FC = () => (
         <SocialLink
           href="https://github.com/jwaterfall/portfolio"
           target="_blank"
+          rel="noopener"
         >
           <FaGithub />
         </SocialLink>
         <SocialLink
           href="https://www.linkedin.com/in/jack-waterfall-7384571a6/"
           target="_blank"
+          rel="noopener"
         >
           <FaLinkedinIn />
         </SocialLink>

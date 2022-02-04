@@ -26,6 +26,7 @@ export const P = styled(BaseTypography).attrs({
   line-height: 1.75rem;
   color: ${(props) => props.theme.textSecondary};
   & > p {
+    margin: 0;
   }
   & a {
     color: ${(props) => props.theme.primary};

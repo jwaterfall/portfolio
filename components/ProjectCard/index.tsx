@@ -1,11 +1,12 @@
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { FC } from 'react';
+import { FaGithub, FaLink } from 'react-icons/fa';
 
 import { Project } from '../../types';
 import Color from '../elements/Color';
 import Flexbox from '../elements/Flexbox';
 import Typography from '../elements/Typography';
-import { Container, Image, RightSection } from './styles';
+import { Container, Image, Link, RightSection } from './styles';
 
 export interface ProjectCardProps {
   project: Project;
@@ -18,7 +19,7 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => (
       alt={project.thumbnail.fields.title}
     />
     <RightSection>
-      <Flexbox direction="column" gap="0.5rem">
+      <Flexbox direction="column" gap="1rem">
         <Typography variant="h5" font="secondary">
           <Color>Featured</Color>
         </Typography>
@@ -32,6 +33,18 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => (
               {item}
             </Typography>
           ))}
+        </Flexbox>
+        <Flexbox gap="1rem">
+          {project.githubLink && (
+            <Link href={project.githubLink} target="_blank" rel="noopener">
+              <FaGithub />
+            </Link>
+          )}
+          {project.link && (
+            <Link href={project.link} target="_blank" rel="noopener">
+              <FaLink />
+            </Link>
+          )}
         </Flexbox>
       </Flexbox>
     </RightSection>
