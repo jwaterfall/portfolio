@@ -1,14 +1,14 @@
 import { FC } from 'react';
+
 import Animation from '../../elements/Animation';
 import Flexbox from '../../elements/Flexbox';
 import { List, ListItem } from '../../elements/List';
 import Section from '../../elements/Section';
 import SectionHeading from '../../elements/SectionHeading';
 import Typography from '../../elements/Typography';
-
 import { Container, Image } from './styles';
 
-const About: FC = () => (
+const AboutSection: FC = () => (
   <Section hash="about">
     <Animation delay={250} duration={500} variant="bottom">
       <SectionHeading>About Me</SectionHeading>
@@ -55,4 +55,4 @@ const About: FC = () => (
   </Section>
 );
 
-export default About;
+export default AboutSection;

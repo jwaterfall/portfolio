@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+
 import { AnimationVariant } from '.';
 
 export const StyledAnimation = styled.div<{

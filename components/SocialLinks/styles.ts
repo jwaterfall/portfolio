@@ -7,10 +7,7 @@ export const Container = styled.div`
   right: 2rem;
   z-index: 10;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 1.5rem;
   @media (max-width: 768px) {
     display: none;
   }
