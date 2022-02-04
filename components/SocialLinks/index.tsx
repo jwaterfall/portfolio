@@ -10,7 +10,7 @@ const SocialLinks: FC = () => (
     <Animation delay={1000} variant="right">
       <Flexbox gap="1.5rem" direction="column">
         <SocialLink
-          href="https://github.com/jwaterfall/portfolio"
+          href="https://github.com/jwaterfall"
           target="_blank"
           rel="noopener"
         >
