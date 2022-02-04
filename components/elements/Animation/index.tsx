@@ -1,9 +1,9 @@
 import { FC, useEffect, useState } from 'react';
-
 import { useInView } from 'react-intersection-observer';
+
 import { StyledAnimation } from './styles';
 
-export type AnimationVariant = 'top' | 'bottom' | 'left' | 'right';
+export type AnimationVariant = 'top' | 'bottom' | 'left' | 'right' | 'fade';
 
 export interface AnimationProps {
   variant?: AnimationVariant;

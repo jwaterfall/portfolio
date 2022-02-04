@@ -9,6 +9,7 @@ export const List = styled.ul<{ columns?: number; maxWidth?: string }>`
     ${(props) => props.columns ?? 1},
     ${(props) => (props.maxWidth ? `minmax(8rem, ${props.maxWidth})` : '1fr')}
   );
+  margin-top: 1rem;
 `;
 
 export const ListItem = styled.ul`

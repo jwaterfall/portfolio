@@ -1,4 +1,5 @@
 import { Meta, Story } from '@storybook/react';
+
 import Typography, {
   TypographyVariant,
 } from '../components/elements/Typography';

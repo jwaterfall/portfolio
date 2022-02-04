@@ -1,4 +1,5 @@
 import { Meta, Story } from '@storybook/react';
+
 import Button, { ButtonColor, ButtonSize } from '../components/elements/Button';
 
 interface Args {

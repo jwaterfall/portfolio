@@ -1,4 +1,5 @@
 import { Meta, Story } from '@storybook/react';
+
 import Logo, { LogoSize } from '../components/elements/Logo';
 
 interface Args {

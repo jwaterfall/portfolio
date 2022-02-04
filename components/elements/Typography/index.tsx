@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import { P, H1, H2, H3, H4, H5 } from './styles';
+import { H1, H2, H3, H4, H5, P } from './styles';
 
 export type TypographyVariant = 'p' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5';
 export type TypographyAlign = 'left' | 'center' | 'right';

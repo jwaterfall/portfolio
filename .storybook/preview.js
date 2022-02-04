@@ -1,7 +1,8 @@
 import { ThemeProvider } from 'styled-components';
-import { darkTheme } from '../styles/themes';
-import GlobalStyle from '../styles/GlobalStyle';
 import { Normalize } from 'styled-normalize';
+
+import GlobalStyle from '../styles/GlobalStyle';
+import { darkTheme } from '../styles/themes';
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },

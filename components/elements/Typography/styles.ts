@@ -25,6 +25,30 @@ export const P = styled(BaseTypography).attrs({
   font-weight: ${(props) => props.theme.fontWeightMedium};
   line-height: 1.75rem;
   color: ${(props) => props.theme.textSecondary};
+  & > p {
+  }
+  & a {
+    color: ${(props) => props.theme.primary};
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    &::after {
+      display: block;
+      content: '';
+      width: 0;
+      height: 1px;
+      position: relative;
+      bottom: 0.37em;
+      background-color: ${(props) => props.theme.primary};
+      transition: ${(props) => props.theme.transition};
+      opacity: 0.5;
+    }
+    &:hover {
+      &::after {
+        width: 100%;
+      }
+    }
+  }
 `;
 
 export const H1 = styled(BaseTypography).attrs({
