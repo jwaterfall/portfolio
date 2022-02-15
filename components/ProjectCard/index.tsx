@@ -8,6 +8,8 @@ import Flexbox from '../elements/Flexbox';
 import Typography from '../elements/Typography';
 import { Container, Image, Link, RightSection } from './styles';
 
+export type ProjectCardVariant = 'primary' | 'secondary';
+
 export interface ProjectCardProps {
   project: Project;
 }

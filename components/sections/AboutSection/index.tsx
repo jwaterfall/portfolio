@@ -10,7 +10,7 @@ import { Container, Image } from './styles';
 
 const AboutSection: FC = () => (
   <Section hash="about">
-    <Animation delay={250} duration={500} variant="bottom">
+    <Animation delay={500} duration={500} variant="bottom">
       <SectionHeading>About Me</SectionHeading>
       <Container>
         <Flexbox direction="column" gap="1rem">

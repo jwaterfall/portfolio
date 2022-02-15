@@ -15,7 +15,7 @@ const BaseTypography = styled.div<Props>`
   ${(props) =>
     props.font === 'secondary' &&
     `font-family: ${props.theme.fontFamilySecondary};`};
-  text-align: ${(props) => props.align};
+  ${(props) => props.align && `text-align: ${props.align};`};
 `;
 
 export const P = styled(BaseTypography).attrs({

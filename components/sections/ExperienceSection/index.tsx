@@ -13,7 +13,7 @@ export interface ExperienceSectionProps {
 
 const ExperienceSection: FC<ExperienceSectionProps> = ({ experiences }) => (
   <Section hash="experience" variant="secondary">
-    <Animation delay={250} duration={500} variant="bottom">
+    <Animation delay={500} duration={500} variant="bottom">
       <SectionHeading>Experience</SectionHeading>
       <Flexbox direction="column" gap="1rem">
         {experiences?.map((experience) => (

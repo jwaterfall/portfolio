@@ -18,7 +18,7 @@ const Animation: FC<AnimationProps> = ({
   duration = 250,
 }) => {
   const [show, setShow] = useState(false);
-  const { ref, inView } = useInView({ threshold: 0.5 });
+  const { ref, inView } = useInView();
 
   useEffect(() => {
     if (inView) setTimeout(() => setShow(true), delay);

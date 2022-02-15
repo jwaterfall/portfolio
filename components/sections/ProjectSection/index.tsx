@@ -13,9 +13,9 @@ export interface ProjectSectionProps {
 
 const ProjectSection: FC<ProjectSectionProps> = ({ projects }) => (
   <Section hash="projects">
-    <Animation delay={250} duration={500} variant="bottom">
+    <Animation delay={500} duration={500} variant="bottom">
       <SectionHeading>Projects</SectionHeading>
-      <Flexbox direction="column" gap="1rem">
+      <Flexbox direction="column" gap="2rem">
         {projects?.map((project) => (
           <ProjectCard project={project} key={project.id} />
         ))}

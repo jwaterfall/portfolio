@@ -2,7 +2,6 @@ import { FC } from 'react';
 
 import useIsScrolledToTop from '../../hooks/useIsScrolledToTop';
 import Animation from '../elements/Animation';
-import Button from '../elements/Button';
 import Logo from '../elements/Logo';
 import NavLink from '../elements/NavLink';
 import { Container, Nav, NavItem } from './styles';
@@ -35,9 +34,6 @@ const Header: FC = () => {
           <NavLink href="/#contact">
             <NavItem>contact</NavItem>
           </NavLink>
-        </Animation>
-        <Animation delay={400}>
-          <Button size="sm">Resume</Button>
         </Animation>
       </Nav>
     </Container>
