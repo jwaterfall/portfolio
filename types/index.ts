@@ -5,7 +5,7 @@ export interface Experience {
   id: string;
   title: string;
   timeframe: string;
-  items: string[];
+  text: string;
 }
 
 export interface Project {

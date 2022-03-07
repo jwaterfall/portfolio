@@ -5,7 +5,7 @@ export const darkTheme: DefaultTheme = {
   foreground: '#202022',
   scrollbarThumb: '#ffffff10',
   text: '#f3f3f3',
-  textSecondary: '#7D7D7E',
+  textSecondary: '#9d9d9e',
   primary: '#00BD9D',
   secondary: '#df205b',
   buttonPrimaryHover: '#00BD9D25',

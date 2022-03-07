@@ -15,22 +15,22 @@ const AboutSection: FC = () => (
       <Container>
         <Flexbox direction="column" gap="1rem">
           <Typography>
-            Hey, my name is Jack waterfall and I love everything programming
-            related! My interest in programming started back in 2012 when I
-            decided to try creating content for various video games that I
-            played using the LUA programming language.
+            Hi, my name is Jack waterfall and I love everything programming
+            related! My interest in programming started back when I was 12 years
+            old and I decided to try creating content for various video games
+            that I played using the LUA programming language.
           </Typography>
           <Typography>
             I studied computer science at college where I spent 2 years learning
-            Python and the theory behind computers. After finishing college I
-            decided that I didn&#39;t want to go to university, instead I spent
-            3 years running a small business during which I taught myself full
-            stack JavaScript development.
+            Python and the theory of computer science. After finishing college I
+            decided that university wasn&#39;t the correct path for me, instead
+            I spent 3 years running a small 3D printing business, during that
+            time I also taught myself full stack JavaScript development.
           </Typography>
           <Typography>
             Now I want to put my skills to good use to create scalable, reliable
-            and accessible software. I joined the School Of Code to kickstart my
-            career in the software development industry.
+            and accessible software. I joined the School Of Code bootcamp to
+            kickstart my career in the software development industry.
           </Typography>
           <Typography>
             Here are some of the most recent technologies that I have used:
@@ -46,10 +46,7 @@ const AboutSection: FC = () => (
             <ListItem>MongoDB</ListItem>
           </List>
         </Flexbox>
-        <Image
-          src="https://media-exp1.licdn.com/dms/image/C4E03AQEx5Dx4CgFrxg/profile-displayphoto-shrink_800_800/0/1641469515061?e=1649289600&v=beta&t=71CiknTQXgLREowrnGN1FDmN57z92Qcgc8KigcnTP60"
-          alt="profile"
-        />
+        <Image src="/images/profile.png" alt="profile" />
       </Container>
     </Animation>
   </Section>

@@ -30,11 +30,6 @@ const Header: FC = () => {
             <NavItem>projects</NavItem>
           </NavLink>
         </Animation>
-        <Animation delay={300}>
-          <NavLink href="/#contact">
-            <NavItem>contact</NavItem>
-          </NavLink>
-        </Animation>
       </Nav>
     </Container>
   );
