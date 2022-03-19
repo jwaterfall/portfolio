@@ -12,7 +12,7 @@ import { ParagraphContainer } from './styles';
 const BannerSection: FC = () => (
   <Section hash="home">
     <Animation delay={500} variant="bottom">
-      <Typography variant="h5" font="secondary" m="0 0 1rem ">
+      <Typography variant="h5" m="0 0 1rem " font="secondary">
         <Color>Hey, my name is</Color>
       </Typography>
     </Animation>
@@ -34,7 +34,7 @@ const BannerSection: FC = () => (
         </Typography>
       </ParagraphContainer>
     </Animation>
-    <Animation delay={900} variant="bottom">
+    <Animation delay={900} variant="bottom" width="100%">
       <ButtonContainer>
         <NavLink href="/#projects">
           <Button isFullWidth>Check out my work!</Button>

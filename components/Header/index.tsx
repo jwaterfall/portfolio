@@ -2,6 +2,7 @@ import { FC } from 'react';
 
 import useIsScrolledToTop from '../../hooks/useIsScrolledToTop';
 import Animation from '../elements/Animation';
+import Button from '../elements/Button';
 import Logo from '../elements/Logo';
 import NavLink from '../elements/NavLink';
 import { Container, Nav, NavItem } from './styles';
@@ -30,6 +31,13 @@ const Header: FC = () => {
             <NavItem>projects</NavItem>
           </NavLink>
         </Animation>
+        <a
+          href="/CV-Jack-Waterfall-East-Midlands.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Button size="sm">Resume</Button>
+        </a>
       </Nav>
     </Container>
   );

@@ -1,8 +1,8 @@
 import { FC } from 'react';
-import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
+import { FaEnvelope, FaGithub, FaLinkedinIn } from 'react-icons/fa';
 
 import Animation from '../elements/Animation';
-import Flexbox from '../elements/Flexbox';
+import { Flexbox } from '../elements/Box';
 import { Container, SocialLink } from './styles';
 
 const SocialLinks: FC = () => (
@@ -22,6 +22,9 @@ const SocialLinks: FC = () => (
           rel="noopener"
         >
           <FaLinkedinIn />
+        </SocialLink>
+        <SocialLink href="mailto:jack.a.waterfall@gmail.com">
+          <FaEnvelope />
         </SocialLink>
       </Flexbox>
     </Animation>

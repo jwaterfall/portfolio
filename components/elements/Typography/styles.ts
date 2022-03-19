@@ -22,7 +22,8 @@ export const P = styled(BaseTypography).attrs({
   as: 'p',
 })<Props>`
   font-size: ${(props) => props.theme.fontSizeMd};
-  font-weight: ${(props) => props.theme.fontWeightMedium};
+  font-weight: ${(props) => props.theme.fontWeightRegular};
+  font-family: ${(props) => props.theme.fontFamily};
   line-height: 1.75rem;
   color: ${(props) => props.theme.textSecondary};
   white-space: pre-line;
@@ -79,12 +80,19 @@ export const H4 = styled(BaseTypography).attrs({
   as: 'h4',
 })<Props>`
   font-size: ${(props) => props.theme.fontSizeLg};
-  font-weight: ${(props) => props.theme.fontWeightSemiBold};
+  font-weight: ${(props) => props.theme.fontWeightMedium};
 `;
 
 export const H5 = styled(BaseTypography).attrs({
   as: 'h5',
 })<Props>`
   font-size: ${(props) => props.theme.fontSizeMd};
-  font-weight: ${(props) => props.theme.fontWeightSemiBold};
+  font-weight: ${(props) => props.theme.fontWeightMedium};
+`;
+
+export const H6 = styled(BaseTypography).attrs({
+  as: 'h6',
+})<Props>`
+  font-size: ${(props) => props.theme.fontSizeSm};
+  font-weight: ${(props) => props.theme.fontWeightRegular};
 `;

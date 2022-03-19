@@ -1,7 +1,8 @@
 import { FC } from 'react';
 
 import Animation from '../../elements/Animation';
-import Flexbox from '../../elements/Flexbox';
+import { Flexbox } from '../../elements/Box';
+import Color from '../../elements/Color';
 import { List, ListItem } from '../../elements/List';
 import Section from '../../elements/Section';
 import SectionHeading from '../../elements/SectionHeading';
@@ -11,7 +12,7 @@ import { Container, Image } from './styles';
 const AboutSection: FC = () => (
   <Section hash="about">
     <Animation delay={500} duration={500} variant="bottom">
-      <SectionHeading>About Me</SectionHeading>
+      <SectionHeading>about</SectionHeading>
       <Container>
         <Flexbox direction="column" gap="1rem">
           <Typography>
@@ -36,14 +37,46 @@ const AboutSection: FC = () => (
             Here are some of the most recent technologies that I have used:
           </Typography>
           <List columns={2} maxWidth="12.5rem">
-            <ListItem>JavaScript</ListItem>
-            <ListItem>TypeScript</ListItem>
-            <ListItem>React</ListItem>
-            <ListItem>NextJS</ListItem>
-            <ListItem>StyledComponents</ListItem>
-            <ListItem>Cypress</ListItem>
-            <ListItem>Storybook</ListItem>
-            <ListItem>MongoDB</ListItem>
+            <ListItem>
+              <Typography variant="h6" font="secondary">
+                <Color>JavaScript</Color>
+              </Typography>
+            </ListItem>
+            <ListItem>
+              <Typography variant="h6" font="secondary">
+                <Color>TypeScript</Color>
+              </Typography>
+            </ListItem>
+            <ListItem>
+              <Typography variant="h6" font="secondary">
+                <Color>React</Color>
+              </Typography>
+            </ListItem>
+            <ListItem>
+              <Typography variant="h6" font="secondary">
+                <Color>NextJS</Color>
+              </Typography>
+            </ListItem>
+            <ListItem>
+              <Typography variant="h6" font="secondary">
+                <Color>StyledComponents</Color>
+              </Typography>
+            </ListItem>
+            <ListItem>
+              <Typography variant="h6" font="secondary">
+                <Color>Cypress</Color>
+              </Typography>
+            </ListItem>
+            <ListItem>
+              <Typography variant="h6" font="secondary">
+                <Color>Storybook</Color>
+              </Typography>
+            </ListItem>
+            <ListItem>
+              <Typography variant="h6" font="secondary">
+                <Color>MongoDB</Color>
+              </Typography>
+            </ListItem>
           </List>
         </Flexbox>
         <Image src="/images/profile.png" alt="profile" />

@@ -5,13 +5,18 @@ export const Container = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
+  background: ${(props) => props.theme.foreground};
+  box-shadow: 0 0.5rem 1.75rem -0.75rem #00000080;
+  @media (max-width: 992px) {
+    grid-template-columns: auto;
+  }
 `;
 
 export const Image = styled.img`
   width: 100%;
+  height: 100%;
   aspect-ratio: 5 / 3;
   object-fit: cover;
-  box-shadow: 0 0.5rem 1.75rem -0.75rem #00000080;
 `;
 
 export const RightSection = styled.div`
@@ -29,4 +34,4 @@ export const Link = styled.a`
       color: ${(props) => props.theme.primary};
     }
   }
-`
+`;
