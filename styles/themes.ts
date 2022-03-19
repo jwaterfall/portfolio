@@ -6,7 +6,7 @@ export const darkTheme: DefaultTheme = {
   scrollbarThumb: '#ffffff10',
   text: '#f3f3f3',
   textSecondary: '#9d9d9e',
-  primary: '#00BD9D',
+  primary: '#00CC99',
   secondary: '#df205b',
   buttonPrimaryHover: '#00BD9D25',
   buttonSecondaryHover: '#CC336325',

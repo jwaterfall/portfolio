@@ -18,7 +18,7 @@ export const PrimaryButton = styled.button<{
     props.size === 'sm' &&
     `padding: 0.75rem 1rem; font-size: ${props.theme.fontSizeXs};`}
   font-family: ${(props) => props.theme.fontFamilySecondary};
-  font-weight: ${(props) => props.theme.fontWeightMedium};
+  font-weight: ${(props) => props.theme.fontWeightRegular};
   text-decoration: none;
   cursor: pointer;
   transition: ${(props) => props.theme.transition};

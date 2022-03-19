@@ -9,13 +9,14 @@ export interface AnimationProps {
   variant?: AnimationVariant;
   delay?: number;
   duration?: number;
+  width?: string;
 }
 
 const Animation: FC<AnimationProps> = ({
-  children,
   variant = 'top',
   delay = 0,
   duration = 250,
+  ...props
 }) => {
   const [show, setShow] = useState(false);
   const { ref, inView } = useInView();
@@ -25,11 +26,13 @@ const Animation: FC<AnimationProps> = ({
   }, [inView, delay]);
 
   return (
-    <div ref={ref}>
-      <StyledAnimation variant={variant} show={show} duration={duration}>
-        {children}
-      </StyledAnimation>
-    </div>
+    <StyledAnimation
+      ref={ref}
+      variant={variant}
+      show={show}
+      duration={duration}
+      {...props}
+    />
   );
 };
 

@@ -3,8 +3,8 @@ import { FC } from 'react';
 import { FaGithub, FaLink } from 'react-icons/fa';
 
 import { Project } from '../../types';
+import Box, { Flexbox } from '../elements/Box';
 import Color from '../elements/Color';
-import Flexbox from '../elements/Flexbox';
 import Typography from '../elements/Typography';
 import { Container, Image, Link, RightSection } from './styles';
 
@@ -21,22 +21,24 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => (
       alt={project.thumbnail.fields.title}
     />
     <RightSection>
-      <Flexbox direction="column" gap="1rem">
-        <Typography variant="h5" font="secondary">
+      <Flexbox direction="column" gap="0.5rem">
+        <Typography variant="h5">
           <Color>Featured</Color>
         </Typography>
         <Typography variant="h3">{project.title}</Typography>
-        <Typography key={project.id}>
-          {documentToReactComponents(project.description)}
-        </Typography>
-        <Flexbox gap="1rem">
+        <Box margin="1rem 0">
+          <Typography key={project.id}>
+            {documentToReactComponents(project.description)}
+          </Typography>
+        </Box>
+        <Flexbox columnGap="1rem" rowGap="0.25rem" flexWrap="wrap">
           {project.technologies.map((item, index) => (
-            <Typography key={index} font="secondary">
-              {item}
+            <Typography variant="h6" key={index}>
+              <Color>{item}</Color>
             </Typography>
           ))}
         </Flexbox>
-        <Flexbox gap="1rem">
+        <Flexbox gap="1rem" marginTop="0.5rem">
           {project.githubLink && (
             <Link href={project.githubLink} target="_blank" rel="noopener">
               <FaGithub />

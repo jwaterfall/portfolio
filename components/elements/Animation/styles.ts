@@ -6,6 +6,7 @@ export const StyledAnimation = styled.div<{
   variant: AnimationVariant;
   show: boolean;
   duration: number;
+  width?: string;
 }>`
   ${(props) =>
     !props.show && props.variant === 'top' && 'transform: translateY(-3rem);'}
@@ -17,4 +18,6 @@ export const StyledAnimation = styled.div<{
     !props.show && props.variant === 'right' && 'transform: translateX(3rem);'}
   ${(props) => !props.show && 'opacity: 0;'}
   transition: ease-in-out ${(props) => props.duration}ms;
+  width: fit-content;
+  ${(props) => props.width && `width: ${props.width};`}
 `;

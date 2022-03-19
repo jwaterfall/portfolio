@@ -10,11 +10,12 @@ export const Container = styled.div<{ isScrolledToTop: boolean }>`
   position: fixed;
   top: 0;
   z-index: 11;
-  background: ${(props) => props.theme.background};
   transition: ${(props) => props.theme.transition};
   ${(props) =>
     !props.isScrolledToTop &&
-    'box-shadow: 0 0.5rem 1.75rem -0.75rem #00000080;'}
+    `box-shadow: 0 0.5rem 1.75rem -0.75rem #00000080;
+  background: ${props.theme.foreground};
+  `}
 `;
 
 export const Nav = styled.nav`
@@ -29,18 +30,22 @@ export const Nav = styled.nav`
 export const NavItem = styled.div`
   font-family: ${(props) => props.theme.fontFamilySecondary};
   font-size: ${(props) => props.theme.fontSizeSm};
-  font-weight: ${(props) => props.theme.fontWeightMedium};
+  font-weight: ${(props) => props.theme.fontWeightRegular};
   transition: ${(props) => props.theme.transition};
   color: ${(props) => props.theme.textSecondary};
   cursor: pointer;
-  text-transform: capitalize;
   &:hover {
     color: ${(props) => props.theme.primary};
     transform: translateY(-0.1rem);
   }
   &::before {
-    content: '//';
-    margin-right: 0.25rem;
+    content: '.';
+    margin-right: 0.1rem;
+    color: ${(props) => props.theme.primary};
+  }
+  &::after {
+    content: '()';
+    margin-left: 0.1rem;
     color: ${(props) => props.theme.primary};
   }
   &.active {
