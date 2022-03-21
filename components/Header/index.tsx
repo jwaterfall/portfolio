@@ -1,4 +1,5 @@
-import { FC } from 'react';
+import { FC, useState } from 'react';
+import { MdMenu } from 'react-icons/md';
 
 import useIsScrolledToTop from '../../hooks/useIsScrolledToTop';
 import Animation from '../elements/Animation';
@@ -9,9 +10,13 @@ import { Container, Nav, NavItem } from './styles';
 
 const Header: FC = () => {
   const isScrolledToTop = useIsScrolledToTop();
+  const [hamburgerVisibility, setHamburgerVisibility] = useState(false);
 
   return (
-    <Container isScrolledToTop={isScrolledToTop}>
+    <Container
+      isScrolledToTop={isScrolledToTop}
+      hamburgerVisibility={hamburgerVisibility}
+    >
       <NavLink href="/#home">
         <Logo size="medium" />
       </NavLink>
@@ -36,9 +41,12 @@ const Header: FC = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Button size="sm">Resume</Button>
+          <Button size="sm" isFullWidth>
+            Resume
+          </Button>
         </a>
       </Nav>
+      <MdMenu onClick={() => setHamburgerVisibility((old) => !old)} />
     </Container>
   );
 };
