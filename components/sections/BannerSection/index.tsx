@@ -39,11 +39,11 @@ const BannerSection: FC = () => (
         <NavLink href="/#projects">
           <Button isFullWidth>Check out my work!</Button>
         </NavLink>
-        <NavLink href="#contact">
+        <a href="mailto:jack.a.waterfall@gmail.com">
           <Button isFullWidth color="secondary">
             Contact me
           </Button>
-        </NavLink>
+        </a>
       </ButtonContainer>
     </Animation>
   </Section>
