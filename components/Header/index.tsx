@@ -42,7 +42,7 @@ const Header: FC = () => {
           rel="noopener noreferrer"
         >
           <Button size="sm" isFullWidth>
-            Resume
+            CV
           </Button>
         </a>
       </Nav>
