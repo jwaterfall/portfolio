@@ -6,15 +6,16 @@ import { Wrapper } from './styles';
 
 export interface INavLinkProps extends LinkProps {
   children: ReactElement;
+  onClick?: () => void;
 }
 
-const NavLink: FC<INavLinkProps> = ({ children, href, ...props }) => {
+const NavLink: FC<INavLinkProps> = ({ children, href, onClick, ...props }) => {
   const { asPath: currentPath } = useRouter();
 
   if (currentPath === href) {
     return (
       <Link href={href} {...props} passHref>
-        <Wrapper>
+        <Wrapper onClick={onClick}>
           {cloneElement(children, {
             className: `${children.props.className} active`,
           })}
@@ -25,7 +26,7 @@ const NavLink: FC<INavLinkProps> = ({ children, href, ...props }) => {
 
   return (
     <Link href={href} {...props} passHref>
-      <Wrapper>{children}</Wrapper>
+      <Wrapper onClick={onClick}>{children}</Wrapper>
     </Link>
   );
 };
