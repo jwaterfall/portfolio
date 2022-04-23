@@ -1,73 +1,101 @@
 import styled from 'styled-components';
 
-export const Nav = styled.nav`
+export const Nav = styled.nav<{ isScrolledToTop: boolean }>`
   display: flex;
   align-items: center;
   gap: 2rem;
   position: relative;
-  z-index: 12;
   color: ${(props) => props.theme.textSecondary};
+  transition: opacity 150ms;
+  ${({ isScrolledToTop }) => !isScrolledToTop && 'opacity: 0;'}
   @media (max-width: 768px) {
-    box-shadow: 0 1rem 1.75rem -0.75rem #00000080;
-    width: 100%;
-    position: absolute;
-    top: 99%;
-    left: 0;
-    flex-direction: column;
-    align-items: stretch;
-    padding: 1rem 2rem;
-    background: ${(props) => props.theme.foreground};
-  }
-  @media (max-width: 576px) {
-    padding: 1rem;
+    display: none;
   }
 `;
 
-export const Container = styled.div<{
-  isScrolledToTop: boolean;
-  hamburgerVisibility: boolean;
-}>`
+export const HamburgerNav = styled.nav`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  z-index: 12;
+  color: ${(props) => props.theme.textSecondary};
+  transition: opacity 150ms;
+`;
+
+export const HamburgerBackground = styled.div`
+  background: ${(props) => props.theme.foreground};
   width: 100%;
-  height: ${(props) => (props.isScrolledToTop ? '6.25rem' : '5rem')};
+  height: 100%;
+  position: absolute;
+  transition: all 500ms;
+  z-index: -1;
+`;
+
+export const Container = styled.div`
+  width: 100%;
+  height: 5rem;
   padding: 0 3.25rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 2rem;
   position: fixed;
   top: 0;
+  left: 0;
   z-index: 11;
-  transition: height 150ms;
-  ${(props) =>
-    !props.isScrolledToTop &&
-    `box-shadow: 0 0.5rem 1.75rem -0.75rem #00000080;
-  background: ${props.theme.foreground};
-  `}
-  &>svg {
+  @media (max-width: 768px) {
+    padding: 0 2rem;
+  }
+  @media (max-width: 576px) {
+    padding: 0 1rem;
+  }
+  & > :first-child {
+    z-index: 14;
+    margin-right: auto;
+  }
+  & > :last-child {
+    z-index: 14;
+  }
+`;
+
+export const HamburgerContainer = styled.div<{
+  isOpen: boolean;
+}>`
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 13;
+  & > svg {
     width: 2rem;
     height: 2rem;
-    display: none;
     color: ${(props) => props.theme.textSecondary};
     &:hover {
       color: ${(props) => props.theme.text};
     }
     cursor: pointer;
-    @media (max-width: 768px) {
-      display: block;
-    }
   }
   @media (max-width: 768px) {
     padding: 0 2rem;
-    ${(props) =>
-      props.hamburgerVisibility && `background: ${props.theme.foreground};`}
+    ${({ isOpen, theme }) => isOpen && `background: ${theme.foreground};`}
   }
   @media (max-width: 576px) {
     padding: 0 1rem;
   }
-  & > ${Nav} {
-    @media (max-width: 768px) {
-      opacity: ${(props) => (props.hamburgerVisibility ? '1' : '0')};
-    }
+  & > ${HamburgerBackground} {
+    ${({ isOpen }) =>
+      !isOpen &&
+      `
+      border-bottom-left-radius: 100vw;
+      transform: translate(100vw, -100vh);
+    `}
   }
+  ${({ isOpen }) => !isOpen && 'pointer-events: none;'}
 `;
 
 export const NavItem = styled.div`
@@ -94,4 +122,48 @@ export const NavItem = styled.div`
   &.active {
     color: ${(props) => props.theme.text};
   }
+`;
+
+export const HamburgerNavItem = styled(NavItem)`
+  font-size: ${(props) => props.theme.fontSizeLg};
+`;
+
+export const HamburgerIcon = styled.button<{
+  isOpen: boolean;
+}>`
+  background: none;
+  border: none;
+  padding: 0;
+  width: 1.75rem;
+  height: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  & > span {
+    display: block;
+    height: 0.26rem;
+    width: 100%;
+    background: ${({ theme }) => theme.textSecondary};
+    border-radius: 0.125rem;
+    transition: all 500ms;
+    transform-origin: left center;
+  }
+  &:hover > span {
+    background: ${({ theme }) => theme.text};
+  }
+  ${({ isOpen }) =>
+    isOpen &&
+    `
+      & > span:nth-child(1) {
+        transform: rotate(45deg);
+      }
+      & > span:nth-child(2) {
+        width: 0%;
+        opacity: 0;
+      }
+      & > span:nth-child(3) {
+        transform: rotate(-45deg);
+      } 
+    `}
 `;
