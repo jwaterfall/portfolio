@@ -7,7 +7,7 @@ import { List, ListItem } from '../../elements/List';
 import Section from '../../elements/Section';
 import SectionHeading from '../../elements/SectionHeading';
 import Typography from '../../elements/Typography';
-import { Container, Image } from './styles';
+import { Container, Image, ImageContainer } from './styles';
 
 const AboutSection: FC = () => (
   <Section hash="about">
@@ -79,7 +79,9 @@ const AboutSection: FC = () => (
             </ListItem>
           </List>
         </Flexbox>
-        <Image src="/images/profile.png" alt="profile" />
+        <ImageContainer>
+          <Image src="/images/profile.png" alt="profile" />
+        </ImageContainer>
       </Container>
     </Animation>
   </Section>

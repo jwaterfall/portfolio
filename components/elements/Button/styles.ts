@@ -10,7 +10,7 @@ export const PrimaryButton = styled.button<{
   color: ${(props) => props.theme.primary};
   background: none;
   border: 1px solid ${(props) => props.theme.primary};
-  border-radius: 0.25rem;
+  border-radius: 0.75rem;
   ${(props) =>
     props.size === 'md' &&
     `padding: 1rem 1.75rem; font-size: ${props.theme.fontSizeSm};`}
@@ -25,6 +25,7 @@ export const PrimaryButton = styled.button<{
   ${(props) => props.isFullWidth && 'width: 100%;'};
   &:hover {
     background: ${(props) => props.theme.buttonPrimaryHover};
+    transform: translateY(-0.2rem);
   }
 `;
 

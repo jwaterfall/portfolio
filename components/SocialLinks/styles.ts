@@ -25,6 +25,6 @@ export const SocialLink = styled.a`
   }
   &:hover {
     color: ${(props) => props.theme.primary};
-    transform: translateY(-0.25rem);
+    transform: translateY(-0.2rem);
   }
 `;
