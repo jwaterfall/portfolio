@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const Nav = styled.nav<{ isScrolledToTop: boolean }>`
+  margin-right: 1rem;
   display: flex;
   align-items: center;
   gap: 2rem;
@@ -82,7 +83,6 @@ export const HamburgerContainer = styled.div<{
   }
   @media (max-width: 768px) {
     padding: 0 2rem;
-    ${({ isOpen, theme }) => isOpen && `background: ${theme.foreground};`}
   }
   @media (max-width: 576px) {
     padding: 0 1rem;
@@ -141,7 +141,6 @@ export const HamburgerIcon = styled.button<{
   flex-direction: column;
   justify-content: space-between;
   & > span {
-    display: block;
     height: 0.26rem;
     width: 100%;
     background: ${({ theme }) => theme.textSecondary};
@@ -159,7 +158,7 @@ export const HamburgerIcon = styled.button<{
         transform: rotate(45deg);
       }
       & > span:nth-child(2) {
-        width: 0%;
+        width: 0;
         opacity: 0;
       }
       & > span:nth-child(3) {
