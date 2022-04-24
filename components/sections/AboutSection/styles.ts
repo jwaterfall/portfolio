@@ -10,9 +10,12 @@ export const Container = styled.div`
 `;
 
 export const ImageContainer = styled.div`
-  margin: 0 5rem;
+  width: 80%;
+  max-width: 25rem;
+  margin: 2rem auto;
   height: min-content;
   transform: rotate(4deg);
+  aspect-ratio: 4/5;
   &:before {
     content: '';
     position: absolute;
@@ -20,24 +23,19 @@ export const ImageContainer = styled.div`
     height: 100%;
     border: 0.125rem solid ${(props) => props.theme.primary};
     border-radius: 3rem;
-    transform: translateY(1rem) translateX(-1rem);
+    transform: translateY(0.75rem) translateX(-0.5rem);
   }
 `;
 
 export const Image = styled.img`
   object-fit: cover;
   width: 100%;
-  aspect-ratio: 4/5;
-  max-width: 25rem;
+  height: 100%;
   border-radius: 3rem;
-  @media (max-width: 1080px) {
-    display: none;
-  }
-
   animation: image 6s ease-in-out infinite;
   @keyframes image {
     50% {
-      transform: translateY(-1.5rem) translateX(1rem);
+      transform: translateY(-0.75rem) translateX(0.5rem);
     }
   }
 `;

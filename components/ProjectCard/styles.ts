@@ -6,7 +6,7 @@ export const Container = styled.div`
   grid-template-columns: 1fr 1fr;
   align-items: center;
   background: ${(props) => props.theme.foreground};
-  box-shadow: 0 0.5rem 1.75rem -0.75rem #00000080;
+  box-shadow: 0 0.5rem 1.75rem -0.75rem hsla(0, 0%, 0%, 0.75);
   @media (max-width: 992px) {
     grid-template-columns: auto;
   }
@@ -17,6 +17,7 @@ export const Image = styled.img`
   height: 100%;
   aspect-ratio: 5 / 3;
   object-fit: cover;
+  box-shadow: 0.5rem 0 1.75rem -0.75rem hsla(0, 0%, 0%, 0.75);
 `;
 
 export const RightSection = styled.div`

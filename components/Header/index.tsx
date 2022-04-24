@@ -11,11 +11,11 @@ const Header: FC = () => {
   const isScrolledToTop = useIsScrolledToTop();
 
   return (
-    <Container>
+    <Container isScrolledToTop={isScrolledToTop}>
       <NavLink href="/#home">
         <Logo size="medium" />
       </NavLink>
-      <Nav isScrolledToTop={isScrolledToTop}>
+      <Nav>
         <Animation>
           <NavLink href="/#about">
             <NavItem>about</NavItem>

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Nav = styled.nav<{ isScrolledToTop: boolean }>`
+export const Nav = styled.nav`
   margin-right: 1rem;
   display: flex;
   align-items: center;
@@ -8,7 +8,6 @@ export const Nav = styled.nav<{ isScrolledToTop: boolean }>`
   position: relative;
   color: ${(props) => props.theme.textSecondary};
   transition: opacity 150ms;
-  ${({ isScrolledToTop }) => !isScrolledToTop && 'opacity: 0;'}
   @media (max-width: 768px) {
     display: none;
   }
@@ -33,7 +32,7 @@ export const HamburgerBackground = styled.div`
   z-index: -1;
 `;
 
-export const Container = styled.div`
+export const Container = styled.div<{ isScrolledToTop: boolean }>`
   width: 100%;
   height: 5rem;
   padding: 0 3.25rem;
@@ -44,11 +43,23 @@ export const Container = styled.div`
   top: 0;
   left: 0;
   z-index: 11;
+  transition: all 150ms;
+  @media (max-width: 1400px) {
+    ${({ isScrolledToTop, theme }) =>
+      !isScrolledToTop &&
+      `
+      background: ${theme.foreground};
+      box-shadow: 0 0.5rem 1.75rem -0.75rem hsla(0, 0%, 0%, 0.75);
+      `}
+  }
   @media (max-width: 768px) {
     padding: 0 2rem;
   }
   @media (max-width: 576px) {
     padding: 0 1rem;
+  }
+  & > ${Nav} {
+    ${({ isScrolledToTop }) => !isScrolledToTop && 'opacity: 0;'}
   }
   & > :first-child {
     z-index: 14;
