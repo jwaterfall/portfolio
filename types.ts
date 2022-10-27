@@ -1,5 +1,5 @@
-import { Document } from '@contentful/rich-text-types';
-import { Asset } from 'contentful';
+import { Document } from "@contentful/rich-text-types";
+import { Asset } from "contentful";
 
 export interface Experience {
   id: string;
@@ -17,4 +17,10 @@ export interface Project {
   link?: string;
   githubLink?: string;
   thumbnail: Asset;
+}
+
+export interface Technology {
+  id: string;
+  name: string;
+  image: Asset;
 }
