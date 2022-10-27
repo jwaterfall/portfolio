@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       colors: {
         background: "hsl(0,0%,9%)",
-        foreground: "rgb(29,29,29)",
+        foreground: "hsl(0,0%,11%)",
         darken: {
           0.1: "hsla(0,0%,0%,0.1)",
           0.2: "hsla(0,0%,0%,0.2)",
@@ -16,6 +16,12 @@ module.exports = {
           0.7: "hsla(0,0%,0%,0.7)",
           0.8: "hsla(0,0%,0%,0.8)",
           0.9: "hsla(0,0%,0%,0.9)",
+        },
+        lighten: {
+          0.05: "hsla(0,0%,100%,0.05)",
+          0.1: "hsla(0,0%,100%,0.1)",
+          0.15: "hsla(0,0%,100%,0.2)",
+          0.2: "hsla(0,0%,100%,0.2)",
         },
         text: "hsl(0,0%,100%)",
         textSecondary: "hsl(240,11%,58%)",
@@ -28,5 +34,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("tailwind-scrollbar")({ nocompatible: true })],
 };
