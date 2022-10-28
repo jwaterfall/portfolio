@@ -27,30 +27,40 @@ export const getProjects = async () => {
 
 const ProjectsSection: NextPage = () => (
   <Section id="projects" heading="my projects" subHeading="Here are some of the projects that I've worked on">
-    <div className="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-x-4 gap-y-12 mt-8">
-      {use(getProjects()).map((project) => (
-        <Animate variant="zoom" key={project.id}>
-          <div className="bg-foreground rounded overflow-hidden">
-            <img className="w-full aspect-video" src={`https:${project.images[0].fields.file.url}`} alt={project.images[0].fields.title} />
-            <div className="p-8">
-              <h5 className="font-semibold text-2xl text-white">{project.title}</h5>
-              <p className="text-textSecondary mt-4">{project.description}</p>
-              <div className="mt-6 flex gap-4">
-                {project.link && (
-                  <a href={project.link} target="_blank" rel="noopener noreferrer">
-                    <Button>Live Demo</Button>
-                  </a>
-                )}
-                {project.githubLink && (
-                  <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
-                    <Button>Github</Button>
-                  </a>
+    <div className="grid grid-cols-1 gap-4 lg:gap-16 mt-8 ">
+      {use(getProjects()).map((project, index) => {
+        const isEven = index % 2 === 0;
+
+        return (
+          <Animate variant="zoom" key={project.id}>
+            <div className={`flex flex-wrap items-center flex-col ${isEven ? "lg:flex-row-reverse" : "lg:flex-row"}`}>
+              <img
+                className="aspect-video lg:w-7/12 w-full lg:block hidden rounded-md border border-foreground shadow-xl hover:scale-105 transition-transform cursor-pointer"
+                src={`https:${project.images[0].fields.file.url}`}
+                alt={project.images[0].fields.title}
+              />
+              <div className={`lg:w-5/12 w-full relative p-8 rounded-md bg-foreground z-50 ${isEven ? "lg:-mr-8" : "lg:-ml-8"}`}>
+                <h5 className="font-semibold text-2xl text-white">{project.title}</h5>
+                <p className="text-textSecondary mt-4">{project.description}</p>
+                {(project.link || project.githubLink) && (
+                  <div className="mt-6 flex gap-4">
+                    {project.link && (
+                      <a href={project.link} target="_blank" rel="noopener noreferrer">
+                        <Button>View Project</Button>
+                      </a>
+                    )}
+                    {project.githubLink && (
+                      <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
+                        <Button>Github</Button>
+                      </a>
+                    )}
+                  </div>
                 )}
               </div>
             </div>
-          </div>
-        </Animate>
-      ))}
+          </Animate>
+        );
+      })}
     </div>
   </Section>
 );
