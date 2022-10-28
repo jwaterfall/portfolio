@@ -12,7 +12,7 @@ const Layout: FC = ({ children }) => (
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       <title>Jack Waterfall - Software Engineer</title>
     </head>
-    <body className="bg-background text-text font-sans scrollbar-thin scrollbar-thumb-rounded-md scrollbar-thumb-lighten-0.05 hover:scrollbar-thumb-lighten-0.1">
+    <body className="bg-background text-text font-sans scrollbar-thin scrollbar-thumb-rounded scrollbar-thumb-lighten-0.05 hover:scrollbar-thumb-lighten-0.1">
       {children}
     </body>
   </html>

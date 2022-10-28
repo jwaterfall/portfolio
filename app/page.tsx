@@ -1,53 +1,16 @@
 import { NextPage } from "next";
-import { use } from "react";
-import { createClient } from "contentful";
 
-import { Technology } from "../types";
-import Animate from "../components/Animate";
+import { SectionDivider } from "../components/Section";
 
-export const getTechnologies = async () => {
-  const client = createClient({
-    space: process.env.CONTENTFUL_SPACE_ID as string,
-    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN as string,
-  });
+import SkillsSection from "./sections/skills";
+import ProjectsSection from "./sections/projects";
 
-  const response = await client.getEntries<Technology>({
-    content_type: "technology",
-  });
-
-  const technologies: Technology[] = response.items.map((item) => ({
-    ...item.fields,
-    id: item.sys.id,
-  }));
-
-  return technologies;
-};
-
-const Page: NextPage = () => {
-  const technologies = use(getTechnologies());
-
-  return (
-    <section className="container px-4 mx-auto mt-16 mb-24">
-      <Animate variant="fade-right">
-        <h3 className="text-lg font-medium text-primary font-code capitalize aos-init aos-animate">my skills</h3>
-      </Animate>
-      <Animate variant="fade-up">
-        <h2 className="text-2xl font-bold mt-1">Here are some of the technologies I've worked with</h2>
-      </Animate>
-      <div className="grid xl:grid-cols-6 md:grid-cols-4 grid-cols-2 gap-x-4 gap-y-12 mt-8">
-        {technologies.map((technology) => (
-          <Animate variant="zoom">
-            <div key={technology.id} className="bg-foreground rounded overflow-hidden">
-              <img className="h-28 mx-auto p-6" src={`https:${technology.image.fields.file.url}`} alt={technology.name} />
-              <div className="bg-darken-0.4 px-4 py-2 w-full">
-                <h5 className="text-center font-code text-l">{technology.name}</h5>
-              </div>
-            </div>
-          </Animate>
-        ))}
-      </div>
-    </section>
-  );
-};
+const Page: NextPage = () => (
+  <main className="container px-4 mx-auto ">
+    <SkillsSection />
+    <SectionDivider />
+    <ProjectsSection />
+  </main>
+);
 
 export default Page;

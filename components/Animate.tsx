@@ -12,7 +12,7 @@ interface AnimateProps {
   delay?: number;
 }
 
-const Animate: FC<AnimateProps> = ({ children, variant = "fade-up", duration = "normal", delay = 0 }) => {
+const Animate: FC<AnimateProps> = ({ children, variant = "fade-up", duration = "normal", delay = 0, ...props }) => {
   const [triggered, setTriggered] = useState(false);
 
   const [ref, inView] = useInView({
@@ -56,7 +56,7 @@ const Animate: FC<AnimateProps> = ({ children, variant = "fade-up", duration = "
   };
 
   return (
-    <div ref={ref} className={`transition-all ${getDurationStyles()} ${triggered ? "" : getVariantStyles()} `}>
+    <div ref={ref} className={`transition-all ${getDurationStyles()} ${triggered ? "" : getVariantStyles()} `} {...props}>
       {children}
     </div>
   );
