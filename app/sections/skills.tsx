@@ -2,9 +2,10 @@ import { NextPage } from "next";
 import { use } from "react";
 import { createClient } from "contentful";
 
-import { Technology } from "../../types";
 import Animate from "../../components/Animate";
 import Section from "../../components/Section";
+
+import { Technology } from "../../types";
 
 export const getTechnologies = async () => {
   const client = createClient({
@@ -31,7 +32,7 @@ const SkillsSection: NextPage = () => (
         <Animate variant="zoom" key={technology.id}>
           <div className="bg-foreground rounded overflow-hidden hover:scale-105 transition-transform">
             <img className="h-28 mx-auto p-6" src={`https:${technology.image.fields.file.url}`} alt={technology.name} />
-            <div className="bg-darken-0.4 px-4 py-2 w-full">
+            <div className="bg-darken-0.2 px-4 py-2 w-full">
               <h5 className="text-center font-code text-l">{technology.name}</h5>
             </div>
           </div>

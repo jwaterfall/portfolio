@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       colors: {
         background: "hsl(0,0%,9%)",
-        foreground: "hsl(0,0%,11%)",
+        foreground: "hsl(0,0%,15%)",
         darken: {
           0.1: "hsla(0,0%,0%,0.1)",
           0.2: "hsla(0,0%,0%,0.2)",
@@ -25,7 +25,7 @@ module.exports = {
           0.2: "hsla(0,0%,100%,0.2)",
         },
         text: "hsl(0,0%,100%)",
-        textSecondary: "hsl(0,0%,50%)",
+        textSecondary: "hsl(0,0%,60%)",
         primary: "hsl(341, 75%, 50%)",
         secondary: "hsl(151, 75%, 50%)",
         buttonHover: "hsla(151, 75%, 50%, 0.25)",
@@ -33,6 +33,29 @@ module.exports = {
       fontFamily: {
         sans: ["Gothic A1", "sans-serif"],
         code: ["Fira Code", "monospace"],
+      },
+      aspectRatio: {
+        "4/5": "4 / 5",
+      },
+      keyframes: {
+        profile: {
+          "50%": {
+            transform: "translateY(-0.75rem) translateX(0.5rem)",
+          },
+        },
+      },
+      animation: {
+        profile: "profile 6s ease-in-out infinite",
+      },
+    },
+    container: {
+      center: true,
+      padding: {
+        DEFAULT: "1rem",
+        sm: "2rem",
+        lg: "4rem",
+        xl: "5rem",
+        "2xl": "6rem",
       },
     },
   },

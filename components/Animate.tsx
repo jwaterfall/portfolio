@@ -10,9 +10,10 @@ interface AnimateProps {
   variant?: AnimateVariant;
   duration?: AnimateDuration;
   delay?: number;
+  className?: string;
 }
 
-const Animate: FC<AnimateProps> = ({ children, variant = "fade-up", duration = "normal", delay = 0, ...props }) => {
+const Animate: FC<AnimateProps> = ({ children, variant = "fade-up", duration = "normal", delay = 0, className, ...props }) => {
   const [triggered, setTriggered] = useState(false);
 
   const [ref, inView] = useInView({
@@ -56,7 +57,7 @@ const Animate: FC<AnimateProps> = ({ children, variant = "fade-up", duration = "
   };
 
   return (
-    <div ref={ref} className={`transition-all ${getDurationStyles()} ${triggered ? "" : getVariantStyles()} `} {...props}>
+    <div ref={ref} className={`transition-all ${getDurationStyles()} ${triggered ? "" : getVariantStyles()} ${className}`} {...props}>
       {children}
     </div>
   );

@@ -13,10 +13,10 @@ export const SectionDivider = () => <hr className="border-0 border-b border-ligh
 const Section: FC<SectionProps> = ({ children, id, heading, subHeading }) => (
   <section className="mt-16 mb-24" id={id}>
     <Animate variant="fade-right">
-      <h3 className="text-lg font-medium text-primary font-code capitalize aos-init aos-animate">{heading}</h3>
+      <h3 className="font-medium text-primary font-code capitalize">{heading}</h3>
     </Animate>
     <Animate variant="fade-up">
-      <h2 className="text-2xl font-bold mt-1">{subHeading}</h2>
+      <h2 className="text-2xl font-bold mt-2">{subHeading}</h2>
     </Animate>
     {children}
   </section>
