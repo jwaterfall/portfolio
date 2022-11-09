@@ -4,7 +4,7 @@ import Animate from "../Animate";
 import Button from "../Button";
 
 const BannerSection: FC = () => (
-  <section className="min-h-screen py-32 flex flex-col justify-center w-fit mx-auto text-center">
+  <section className="min-h-screen py-32 flex flex-col justify-center w-fit mx-auto text-center md:text-left">
     <Animate variant="fade-up">
       <h4 className="font-medium text-primary font-code">Hey, my name is</h4>
     </Animate>
