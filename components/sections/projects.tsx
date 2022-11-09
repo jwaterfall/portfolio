@@ -1,10 +1,9 @@
-import { NextPage } from "next";
-import { use } from "react";
+import { FC, use } from "react";
 import { createClient } from "contentful";
 
-import Animate from "../../components/Animate";
-import Section from "../../components/Section";
-import Button from "../../components/Button";
+import Animate from "../Animate";
+import Section from "../Section";
+import Button from "../Button";
 
 import { Project } from "../../types";
 
@@ -30,7 +29,7 @@ export const getProjects = async () => {
   return projects;
 };
 
-const ProjectsSection: NextPage = () => (
+const ProjectsSection: FC = () => (
   <Section id="projects" heading="my projects" subHeading="Here are some of the projects that I've worked on">
     <div className="grid grid-cols-1 gap-4 lg:gap-16 mt-8 ">
       {use(getProjects()).map((project, index) => {
@@ -51,7 +50,7 @@ const ProjectsSection: NextPage = () => (
               <div className={`lg:w-5/12 w-full relative p-8 rounded-md lg:bg-foreground z-50 ${isEven ? "lg:-mr-8" : "lg:-ml-8"}`}>
                 <h3 className="font-semibold text-2xl text-white">{project.title}</h3>
                 <p className="text-textSecondary mt-4">{project.description}</p>
-                <h6 className="font-code text-secondary text-sm mt-4">{project.technologies.map((technology) => technology.name).join(", ")}</h6>
+                <h6 className="font-code text-primary text-sm mt-4">{project.technologies.map((technology) => technology.name).join(", ")}</h6>
                 {(project.link || project.githubLink) && (
                   <div className="mt-6 flex gap-4">
                     {project.link && (

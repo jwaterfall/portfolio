@@ -1,5 +1,3 @@
-![icon](images/banner.png)
-
 <h1 align="center">
   Jack Waterfall - Portfolio
 </h1>

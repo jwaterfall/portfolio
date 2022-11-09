@@ -11,7 +11,7 @@ interface SectionProps {
 export const SectionDivider = () => <hr className="border-0 border-b border-lighten-0.025" />;
 
 const Section: FC<SectionProps> = ({ children, id, heading, subHeading }) => (
-  <section className="mt-16 mb-24" id={id}>
+  <section className="py-16" id={id}>
     <Animate variant="fade-right">
       <h3 className="font-medium text-primary font-code capitalize">{heading}</h3>
     </Animate>

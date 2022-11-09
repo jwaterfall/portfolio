@@ -1,9 +1,8 @@
-import { NextPage } from "next";
-import { use } from "react";
+import { FC, use } from "react";
 import { createClient } from "contentful";
 
-import Animate from "../../components/Animate";
-import Section from "../../components/Section";
+import Animate from "../Animate";
+import Section from "../Section";
 
 import { Technology } from "../../types";
 
@@ -25,7 +24,7 @@ export const getTechnologies = async () => {
   return technologies;
 };
 
-const SkillsSection: NextPage = () => (
+const SkillsSection: FC = () => (
   <Section id="skills" heading="my skills" subHeading="Here are some of the technologies that I've worked with">
     <div className="grid xl:grid-cols-6 md:grid-cols-4 grid-cols-2 gap-x-4 gap-y-12 mt-8">
       {use(getTechnologies()).map((technology) => (

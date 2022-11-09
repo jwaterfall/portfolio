@@ -26,9 +26,10 @@ module.exports = {
         },
         text: "hsl(0,0%,100%)",
         textSecondary: "hsl(0,0%,60%)",
-        primary: "hsl(341, 75%, 50%)",
-        secondary: "hsl(151, 75%, 50%)",
-        buttonHover: "hsla(151, 75%, 50%, 0.25)",
+        primary: "hsl(151, 75%, 50%)",
+        secondary: "hsl(341, 75%, 50%)",
+        buttonHoverPrimary: "hsla(151, 75%, 50%, 0.25)",
+        buttonHoverSecondary: "hsla(341, 75%, 50%, 0.25)",
       },
       fontFamily: {
         sans: ["Gothic A1", "sans-serif"],

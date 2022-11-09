@@ -1,13 +1,13 @@
-import { NextPage } from "next";
+import { FC } from "react";
 import Image from "next/image";
 
-import Animate from "../../components/Animate";
-import Section from "../../components/Section";
+import Animate from "../Animate";
+import Section from "../Section";
 
 import profile from "../../public/profile.png";
 
-const AboutSection: NextPage = () => (
-  <Section id="about" heading="about me" subHeading="I'm a software engineer working at Percayso Inform">
+const AboutSection: FC = () => (
+  <Section id="about" heading="about me" subHeading="I'm a software engineer">
     <div className="grid grid-cols-1 lg:grid-cols-5 gap-4 lg:gap-16 items-center mt-8 w-full">
       <Animate variant="zoom" className="col-span-3">
         <p className="text-textSecondary">
@@ -25,7 +25,7 @@ const AboutSection: NextPage = () => (
         </p>
       </Animate>
       <Animate variant="zoom" className="hidden lg:block col-span-2">
-        <div className="rotate-3 aspect-4/5 max-h-96 mx-auto before:absolute before:w-full before:h-full before:rounded-3xl before:border-2 before:border-secondary before:-translate-x-4 before:translate-y-4 before:-z-10">
+        <div className="rotate-3 aspect-4/5 max-h-96 mx-auto before:absolute before:w-full before:h-full before:rounded-3xl before:border-2 before:border-primary before:-translate-x-4 before:translate-y-4 before:-z-10">
           <Image src={profile} alt="profile picture" className="w-full h-full rounded-3xl object-cover animate-profile" />
         </div>
       </Animate>

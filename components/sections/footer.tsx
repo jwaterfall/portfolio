@@ -1,8 +1,8 @@
-import { NextPage } from "next";
+import { FC } from "react";
 
-import Animate from "../../components/Animate";
+import Animate from "../Animate";
 
-const FooterSection: NextPage = () => (
+const FooterSection: FC = () => (
   <Animate variant="zoom">
     <div className="flex flex-col items-center my-16">
       <p className="text-textSecondary font-code text-xs">Designed & Built by Jack Waterfall</p>
