@@ -2,8 +2,9 @@
 const nextConfig = {
   reactStrictMode: true,
   productionBrowserSourceMaps: true,
+  experimental: { appDir: true },
   images: {
-    domains: ['images.ctfassets.net'],
+    domains: ["images.ctfassets.net"],
   },
 };
 
