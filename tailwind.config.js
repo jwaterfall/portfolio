@@ -32,8 +32,8 @@ module.exports = {
         buttonHoverSecondary: "hsla(341, 75%, 50%, 0.25)",
       },
       fontFamily: {
-        sans: ["Gothic A1", "sans-serif"],
-        code: ["Fira Code", "monospace"],
+        sans: ["var(--font-gothic-a1)"],
+        code: ["var(--font-fira-code)"],
       },
       aspectRatio: {
         "4/5": "4 / 5",
