@@ -1,14 +1,22 @@
 import { FC } from "react";
-import { Inter } from "@next/font/google";
+import { Fira_Code, Gothic_A1 } from "@next/font/google";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 import Navbar from "../components/Navbar";
 import "../styles/globals.css";
 
-const inter = Inter();
+const gothicA1 = Gothic_A1({
+  weight: ["400", "600", "700"],
+  variable: "--font-gothic-a1",
+});
+
+const firaCode = Fira_Code({
+  weight: ["400", "500"],
+  variable: "--font-fira-code",
+});
 
 const Layout: FC = ({ children }) => (
-  <html className={`scroll-smooth ${inter.className}`}>
+  <html className={`scroll-smooth ${gothicA1.variable} ${firaCode.variable}`}>
     <head>
       <meta charSet="utf-8" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
