@@ -1,4 +1,5 @@
 import { FC, use } from "react";
+import Image from "next/image";
 import { createClient } from "contentful";
 
 import Animate from "../Animate";
@@ -30,7 +31,13 @@ const SkillsSection: FC = () => (
       {use(getTechnologies()).map((technology) => (
         <Animate variant="zoom" key={technology.id}>
           <div className="bg-foreground rounded overflow-hidden hover:scale-105 transition-transform">
-            <img className="h-28 mx-auto p-6" src={`https:${technology.image.fields.file.url}`} alt={technology.name} />
+            <Image
+              width={150}
+              height={150}
+              className="h-28 mx-auto p-6"
+              src={`https:${technology.image.fields.file.url}`}
+              alt={technology.name}
+            />
             <div className="bg-darken-0.2 px-4 py-2 w-full">
               <h5 className="text-center font-code text-l">{technology.name}</h5>
             </div>

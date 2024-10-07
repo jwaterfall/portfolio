@@ -1,5 +1,5 @@
 import { FC, PropsWithChildren } from "react";
-import { Fira_Code, Gothic_A1 } from "@next/font/google";
+import { Fira_Code, Gothic_A1 } from "next/font/google";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 import Navbar from "../components/Navbar";

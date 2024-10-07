@@ -1,6 +1,6 @@
 "use client";
 
-import { FC, useEffect, useState } from "react";
+import { FC, PropsWithChildren, useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 
 type AnimateVariant = "fade" | "fade-up" | "fade-down" | "fade-left" | "fade-right" | "zoom";
@@ -44,7 +44,7 @@ const getDurationStyles = (duration: AnimateDuration) => {
   }
 };
 
-const Animate: FC<AnimateProps> = ({ children, variant = "fade-up", duration = "normal", delay = 0, className, triggered: manuallyTriggered, ...props }) => {
+const Animate: FC<PropsWithChildren<AnimateProps>> = ({ children, variant = "fade-up", duration = "normal", delay = 0, className, triggered: manuallyTriggered, ...props }) => {
   const [triggered, setTriggered] = useState(false);
 
   const [ref, inView] = useInView({
@@ -59,7 +59,7 @@ const Animate: FC<AnimateProps> = ({ children, variant = "fade-up", duration = "
     }
 
     setTriggered(inView);
-  }, [inView]);
+  }, [inView, delay]);
 
   const shouldAnimate = manuallyTriggered === undefined ? triggered : manuallyTriggered;
 

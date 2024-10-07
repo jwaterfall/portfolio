@@ -16,7 +16,7 @@ const AboutSection: FC = () => (
           <br />
           <br />
           I studied computer science at college where I spent 2 years learning Python and the theory of computer science. After finishing college I
-          decided that university wasn't the correct path for me, instead I spent 3 years running a small 3D printing business, during that time I
+          decided that university wasn&apos;t the correct path for me, instead I spent 3 years running a small 3D printing business, during that time I
           also taught myself full stack JavaScript development.
           <br />
           <br />

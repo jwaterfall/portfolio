@@ -13,12 +13,12 @@ const BannerSection: FC = () => (
     </Animate>
     <Animate variant="fade-up" delay={400}>
       <h1 className="text-5xl lg:text-7xl font-semibold">
-        I'm a <span className="text-secondary">software engineer</span>.
+        I&apos;m a <span className="text-secondary">software engineer</span>.
       </h1>
     </Animate>
     <Animate variant="fade-up" delay={600}>
       <p className="text-textSecondary my-12 max-w-lg">
-        I'm a Derby-based full stack software engineer with a passion for building scalable, reliable and accessible software. I am currently working
+        I&apos;m a Derby-based full stack software engineer with a passion for building scalable, reliable and accessible software. I am currently working
         at <span className="text-primary">Percayso Inform</span>.
       </p>
     </Animate>

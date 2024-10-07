@@ -1,4 +1,5 @@
 import { FC, use } from "react";
+import Image from "next/image";
 import { createClient } from "contentful";
 
 import Animate from "../Animate";
@@ -42,10 +43,12 @@ const ProjectsSection: FC = () => (
                 isEven ? "lg:flex-row-reverse" : "lg:flex-row"
               }`}
             >
-              <img
+              <Image
+                width={800}
+                height={600}
                 className="aspect-video lg:w-7/12 w-full rounded-md border border-foreground shadow-xl hover:lg:scale-105 transition-transform cursor-pointer"
-                src={`https:${project.images[0].fields.file.url}`}
-                alt={project.images[0].fields.title}
+                src={`https:${project.images[0].fields.file?.url}`}
+                alt={project.title}
               />
               <div className={`lg:w-5/12 w-full relative p-8 rounded-md lg:bg-foreground z-50 ${isEven ? "lg:-mr-8" : "lg:-ml-8"}`}>
                 <h3 className="font-semibold text-2xl text-white">{project.title}</h3>
