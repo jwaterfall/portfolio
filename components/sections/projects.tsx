@@ -1,6 +1,6 @@
 import { FC, use } from "react";
 import Image from "next/image";
-import { createClient } from "contentful";
+import { AssetDetails, createClient } from "contentful";
 
 import Animate from "../Animate";
 import Section from "../Section";
@@ -44,8 +44,8 @@ const ProjectsSection: FC = () => (
               }`}
             >
               <Image
-                width={800}
-                height={600}
+                width={(project.images[0].fields.file!.details! as AssetDetails).image!.width}
+                height={(project.images[0].fields.file!.details! as AssetDetails).image!.height}
                 className="aspect-video lg:w-7/12 w-full rounded-md border border-foreground shadow-xl hover:lg:scale-105 transition-transform cursor-pointer"
                 src={`https:${project.images[0].fields.file?.url}`}
                 alt={project.title}

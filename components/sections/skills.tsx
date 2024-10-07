@@ -1,6 +1,6 @@
 import { FC, use } from "react";
 import Image from "next/image";
-import { createClient, EntrySkeletonType } from "contentful";
+import { AssetDetails, createClient } from "contentful";
 
 import Animate from "../Animate";
 import Section from "../Section";
@@ -36,9 +36,9 @@ const SkillsSection: FC = () => (
         <Animate variant="zoom" key={technology.id}>
           <div className="bg-foreground rounded overflow-hidden hover:scale-105 transition-transform">
             <Image
-              width={150}
-              height={150}
-              className="h-28 mx-auto p-6"
+              width={(technology.image.fields.file!.details! as AssetDetails).image!.width}
+              height={(technology.image.fields.file!.details! as AssetDetails).image!.height}
+              className="h-28 mx-auto p-6 object-contain"
               src={`https:${technology.image.fields.file!.url}`}
               alt={technology.name}
             />
