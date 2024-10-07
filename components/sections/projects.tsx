@@ -20,12 +20,12 @@ export const getProjects = async () => {
 
   const projects: Project[] = response.items.map((item) => ({
     ...item.fields,
-    technologies: item.fields.technologies.map((technology: any) => ({
+    technologies: (item.fields.technologies as any).map((technology: any) => ({
       ...technology.fields,
       id: technology.sys.id,
     })),
     id: item.sys.id,
-  }));
+  })) as Project[];
 
   return projects;
 };
