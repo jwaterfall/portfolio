@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, PropsWithChildren } from "react";
 import { Fira_Code, Gothic_A1 } from "@next/font/google";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
@@ -7,15 +7,17 @@ import "../styles/globals.css";
 
 const gothicA1 = Gothic_A1({
   weight: ["400", "600", "700"],
+  subsets: ["latin"],
   variable: "--font-gothic-a1",
 });
 
 const firaCode = Fira_Code({
   weight: ["400", "500"],
+  subsets: ["latin"],
   variable: "--font-fira-code",
 });
 
-const Layout: FC = ({ children }) => (
+const Layout: FC<PropsWithChildren> = ({ children }) => (
   <html className={`scroll-smooth ${gothicA1.variable} ${firaCode.variable}`}>
     <head>
       <meta charSet="utf-8" />
@@ -25,13 +27,25 @@ const Layout: FC = ({ children }) => (
     <body className="bg-background text-text font-sans scrollbar-thin scrollbar-thumb-rounded scrollbar-thumb-lighten-0.05 hover:scrollbar-thumb-lighten-0.1">
       <Navbar />
       <div className="flex-col items-center gap-4 after:w-0.5 after:h-16 after:bg-textSecondary fixed left-16 bottom-0 hidden xl:flex">
-        <a href="https://github.com/jwaterfall" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://github.com/jwaterfall"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <FaGithub className="w-6 h-6 text-textSecondary transition-colors hover:text-primary cursor-pointer" />
         </a>
-        <a href="https://www.linkedin.com/in/jwaterfall" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://www.linkedin.com/in/jwaterfall"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <FaLinkedin className="w-6 h-6 text-textSecondary transition-colors hover:text-primary cursor-pointer" />
         </a>
-        <a href="mailto:jack.a.waterfall@gmail.com" target="_blank" rel="noopener noreferrer">
+        <a
+          href="mailto:jack.a.waterfall@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <FaEnvelope className="w-6 h-6 text-textSecondary transition-colors hover:text-primary cursor-pointer" />
         </a>
       </div>
